@@ -1,13 +1,19 @@
 import React from 'react'
-import Footer from './Footer'
+import SideBar from './SideBar'
 import Navbar from './Navbar'
 
 const Layout = ({children}) => {
   return (
     <div>
         <Navbar />
-        {children}
-        <Footer />
+        <div className='flex'>
+            <SideBar />
+            <div className='ml-[300px] p-[1rem]'>
+            {children}
+            </div>
+        </div>
+      
+       
     </div>
   )
 }
