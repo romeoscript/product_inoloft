@@ -1,26 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
+import { Map, GoogleApiWrapper } from "google-maps-react";
 
-import { Map,GoogleApiWrapper } from "google-maps-react";
-
- class MapContainer extends Component {
-
-  render() {
-    return (
-      <div className="w-full">
-        {" "}
-        <Map
-          google={this.props.google}
-          style={{ width: "250px", height: "250px", position: "relative" }}
-          zoom={14}
-          initialCenter={{
-            lat: 47.444,
-            lng: -122.176,
-          }}
-        />
-      </div>
-    );
-  }
-}
+const MapContainer = (props) => {
+  return (
+    <div className="w-full m-auto relative" style={{width:'100%'}}>
+      <Map
+        google={props.google}
+        style={{ width: "100%", height: "200px", position: "relative " }}
+        zoom={14}
+        initialCenter={{
+          lat: 47.444,
+          lng: -122.176,
+        }}
+      />
+    </div>
+  );
+};
 export default GoogleApiWrapper({ 
     apiKey: "  AIzaSyCqUKEOocU-P6SyHyt2lQzXPS6wsSKDk2A  "   
 })(MapContainer);  

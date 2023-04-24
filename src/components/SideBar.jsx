@@ -6,7 +6,7 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 
 const SideBar = () => {
   return (
-    <div className="bg-[green] fixed h-full w-[300px] p-[3rem]" >
+    <div className=" fixed h-full w-[300px] p-[3rem] border-r-[1px] border-[grey] mt-[80px]" >
       <ul className="flex gap-3 flex-col">
         <li className="flex items-center gap-3">
           <img src={pic} alt="" />

@@ -6,8 +6,12 @@ import Link from "@mui/material/Link";
 import HomeIcon from "@mui/icons-material/Home";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import image1 from "../assets/image1.svg";
+import logogroup from "../assets/logogroup.svg";
 import MapContainer from "../components/Map";
-
+import pic from "../assets/pic.png";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ytvid from '../assets/ytvid.svg'
+import OfferDetails from '../components/OfferDetails'
 
 const Product = () => {
   const breadcrumbs = [
@@ -23,7 +27,7 @@ const Product = () => {
   ];
   return (
     <Layout>
-      <div>
+      <div className="mt-[80px]">
         <div className="flex w-full justify-between items-center">
           <Breadcrumbs
             separator={<NavigateNextIcon fontSize="small" />}
@@ -36,11 +40,13 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="flex border-[1px] border-[grey] mt-[1rem] min-h-[400px]">
+        <div className="flex border-[1px] border-[grey] mt-[1rem] min-h-[400px] ">
           <aside className="basis-[70%]">
             <img src={image1} alt="" />
             <div className="p-[1rem]">
-              <h3 className="text-xl">Intelligent Finite Elements in Structural mechanics</h3>
+              <h3 className="text-xl">
+                Intelligent Finite Elements in Structural mechanics
+              </h3>
               <p className="text-[13px]">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -55,12 +61,38 @@ const Product = () => {
               </p>
             </div>
           </aside>
-          <aside className="basis-[14%]">
-          <MapContainer />
+          <aside className=" flex flex-col gap-[8%] justify-center p-[1rem]">
+            <div className="h-[40%]">
+              <p>Offered By</p>
+              <img src={logogroup} alt="" />
+              <ul>
+                <li className="flex items-center gap-3">
+                  <img src={pic} alt="" />
+                  <span>
+                    Sven Pietsch <br /> <small>Innoloft GmbH</small>
+                  </span>
+                </li>
+              </ul>
+              <p className="w-[70%]">
+                <span>
+                  <LocationOnIcon />
+                </span>
+                Jülicher Straße 72a,  52070 Aachen, Germany
+              </p>
+            </div>
+            <div className="h-[40%]">
+              <MapContainer />
+            </div>
           </aside>
         </div>
+
+        {/* videosection */}
+        <div className=" border-[1px] border-[grey] mt-[1rem] min-h-[400px]  flex flex-col relative items-center justify-center">
+          <p className="p-[2rem] absolute top-2 left-2"> video</p>
+          <img src={ytvid} className='h-[70%] w-[60%] m-auto'/>
+       </div>
+       <OfferDetails />
       </div>
-    
     </Layout>
   );
 };

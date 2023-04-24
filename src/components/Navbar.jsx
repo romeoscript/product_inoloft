@@ -6,7 +6,7 @@ import profile from "../assets/profile.svg";
 
 const Navbar = () => {
   return (
-    <section className="bg-[#272E71] p-[1rem] flex items-center justify-between gap-4">
+    <section className="bg-[#272E71] p-[1rem] flex items-center justify-between gap-4 fixed w-full">
       <div>
         <img src={logo} alt="logo" />
       </div>
