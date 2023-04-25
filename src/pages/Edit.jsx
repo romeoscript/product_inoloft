@@ -59,24 +59,26 @@ const Edit = () => {
           </button>
         </div>
 
-        <div className="flex border-[1px] border-[grey] mt-[1rem] min-h-[400px] ">
-          <aside className="basis-[70%]">
+        <div className="md:flex block border-[1px] border-[grey] mt-[1rem] min-h-[400px] ">
+          <aside className="md:basis-[70%] basis-auto">
             <img src={image1} alt="" />
             <div className="p-[1rem]">
               <h3 className="text-xl">
                 Intelligent Finite Elements in Structural mechanics
               </h3>
 
-              <CKEditor
+             <div className="w-full">
+             <CKEditor
                 editor={ClassicEditor}
                 data={editorData}
                 onChange={handleEditorChange}
               />
+             </div>
             <p className="flex gap-3 justify-end mt-[0.5rem]">  <button>cancel</button> <button className="bg-[#272E71] text-white px-[0.5rem] rounded">save</button></p>
             </div>
           </aside>
           <aside className=" flex flex-col gap-[8%] justify-center p-[1rem]">
-            <div className="h-[40%]">
+            <div className="md:h-[40%] h-auto">
               <p>Offered By</p>
               <img src={logogroup} alt="" />
               <ul>
@@ -94,7 +96,7 @@ const Edit = () => {
                 Jülicher Straße 72a, 52070 Aachen, Germany
               </p>
             </div>
-            <div className="h-[40%]">
+            <div className="h-[40%] md:block hidden">
               <MapContainer />
             </div>
           </aside>

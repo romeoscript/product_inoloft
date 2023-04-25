@@ -40,8 +40,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="flex border-[1px] border-[grey] mt-[1rem] min-h-[400px] ">
-          <aside className="basis-[70%]">
+        <div className="md:flex block border-[1px] border-[grey] mt-[1rem] min-h-[400px] ">
+          <aside className="md:basis-[70%] basis-auto">
             <img src={image1} alt="" />
             <div className="p-[1rem]">
               <h3 className="text-xl">
@@ -77,10 +77,10 @@ const Product = () => {
                 <span>
                   <LocationOnIcon />
                 </span>
-                Jülicher Straße 72a,  52070 Aachen, Germany
+                Jülicher Straße 72a, 52070 Aachen, Germany
               </p>
             </div>
-            <div className="h-[40%]">
+            <div className="h-[40%] md:block hidden">
               <MapContainer />
             </div>
           </aside>
